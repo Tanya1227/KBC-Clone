@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBC Clone</title>
+    <link rel ="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+<div class="class">
+    <!--left-->
+    <div class="left">
+        <div class="ques" id="question-container">
+            <audio id="myAudio">
+                <source src="./kbc.mp3" type="audio/mp3">
+            </audio>
+            <p id="question-text" class="question">Loading question...</p>
+            <div class="opt" id="options-container">
+                <button id="option-1" onclick="selectOption('option-1')">Loading option 1...</button>
+                <button id="option-2" onclick="selectOption('option-2')">Loading option 2...</button>
+                <button id="option-3" onclick="selectOption('option-3')">Loading option 3...</button>
+                <button id="option-4" onclick="selectOption('option-4')">Loading option 4...</button>
+            </div>
+        </div>
+        <div>
+        <button class="button" onclick="verifyAns()">Lock</button>
+        <button class="button" onclick="quitGame()">Quit</button>
+        <button class="button" onclick="lifeLine()">50-50 Life Line</button>
+        <div id="hint-container" class="hint-container">
+            <button class="button1" id="show-button" onclick="Hint()">Hint</button>
+        </div>
+    </div>
+    </div>
+<!-- Right -->
+    <div class="right">
+        <!-- Add this div for displaying the timer -->
+<div id="timer-container">
+    <p id="timer">Timer: <span id="timer-count">0:00</span></p>
+</div>
+<hr>
+        <div class="right-container">
+        <div id="price-container"></div>
+        <div class="green-dot" id="green-dot-container"></div>
+    </div>
+    </div>
+</div>
+
+<script src="Array.js"></script>
+</body>
+</html>
